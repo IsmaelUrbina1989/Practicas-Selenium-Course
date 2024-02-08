@@ -74,7 +74,7 @@ public class Carrito_de_Compras {
 		}else {
 			System.out.println("ERROR: La Orden NO es correcta");
 		}		
-		Thread.sleep(2000);
+		Thread.sleep(3000);
 		
 		driver.close();
 	}
