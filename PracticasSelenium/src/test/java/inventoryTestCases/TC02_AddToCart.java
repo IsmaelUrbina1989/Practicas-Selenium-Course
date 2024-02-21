@@ -29,6 +29,7 @@ public class TC02_AddToCart {
 	@Test
 	public void TC02() {
 		loginPage.login(GlobalVariables.STANDARD_USER, GlobalVariables.PASSWORD);
+		inventoryPage.addToCart(GlobalVariables.FIRSTNAME, GlobalVariables.LASTNAME, GlobalVariables.ZIPCODE);
 		boolean textValidacion = inventoryPage.verifyOrderText();
 		Assert.assertTrue(textValidacion);
 	}

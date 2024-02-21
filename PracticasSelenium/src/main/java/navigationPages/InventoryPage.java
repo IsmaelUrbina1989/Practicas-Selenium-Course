@@ -26,7 +26,7 @@ public class InventoryPage {
 
 
 	//Methods AddToCart
-	public void login (String firstname, String lastname, String postalcode ) {
+	public void addToCart (String firstname, String lastname, String postalcode ) {
 		WrapClass.click(addBtn);
 		WrapClass.click(cartLink);
 		WrapClass.click(checkuotBtn);
