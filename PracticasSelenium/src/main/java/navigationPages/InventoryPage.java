@@ -13,7 +13,7 @@ public class InventoryPage {
 		PageFactory.initElements(driver, this);
 	}
 
-	//WebElements Add to Cart
+	//WebElements AddToCart
 	@FindBy(id = "add-to-cart-sauce-labs-backpack") private WebElement addBtn;
 	@FindBy(id = "shopping_cart_container") private WebElement cartLink;
 	@FindBy(id = "checkout") private WebElement checkuotBtn;
