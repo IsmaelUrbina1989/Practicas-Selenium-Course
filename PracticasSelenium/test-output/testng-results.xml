@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2024-02-21T00:50:37Z" name="Default suite" finished-at="2024-02-21T00:50:40Z" duration-ms="3105">
+    <groups>
+    </groups>
+    <test started-at="2024-02-21T00:50:37Z" name="Default test" finished-at="2024-02-21T00:50:40Z" duration-ms="3105">
+      <class name="inventoryTestCases.TC02_AddToCart">
+        <test-method is-config="true" signature="startWebDriver()[pri:0, instance:inventoryTestCases.TC02_AddToCart@5445f5ba]" started-at="2024-02-20T18:50:37Z" name="startWebDriver" finished-at="2024-02-20T18:50:39Z" duration-ms="2569" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startWebDriver -->
+        <test-method signature="TC02()[pri:0, instance:inventoryTestCases.TC02_AddToCart@5445f5ba]" started-at="2024-02-20T18:50:39Z" name="TC02" finished-at="2024-02-20T18:50:40Z" duration-ms="350" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC02 -->
+        <test-method is-config="true" signature="closeDriver()[pri:0, instance:inventoryTestCases.TC02_AddToCart@5445f5ba]" started-at="2024-02-20T18:50:40Z" name="closeDriver" finished-at="2024-02-20T18:50:40Z" duration-ms="162" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeDriver -->
+      </class> <!-- inventoryTestCases.TC02_AddToCart -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
