@@ -37,6 +37,6 @@ public class TC02_AddToCart {
 	@AfterTest
 	public void closeDriver() {
 		WrapClass.takeScreenshot(driver, "TC02_AddToCart");
-		//driver.quit();
+		driver.quit();
 	}
 }

@@ -10,7 +10,7 @@
 
   <test name="TC02_AddToCart">
 <classes>
-<class name="loginTestCases.TC02_LoginLockedUser"/>
+<class name="inventoryTestCases.TC02_AddToCart"/>
 </classes>
 </test> <!-- Test -->
 </suite> <!-- Suite -->
