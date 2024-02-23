@@ -8,8 +8,12 @@ import org.testng.Assert;
 
 import commonMethods.GlobalVariables;
 import commonMethods.WrapClass;
-import navigationPages.InventoryPage;
+import navigationPages.AddToCartPage;
+import navigationPages.CheckOutPage;
+import navigationPages.CompletePage;
+import navigationPages.InformationPage;
 import navigationPages.LoginPage;
+import navigationPages.OverviewPage;
 import setupDriver.SetupDriver;
 
 public class TC02_AddToCart {
@@ -19,7 +23,11 @@ public class TC02_AddToCart {
 
 	//PageObjects
 	LoginPage loginPage = new LoginPage(driver);
-	InventoryPage inventoryPage = new InventoryPage(driver);
+	AddToCartPage addToCartPage = new AddToCartPage(driver);
+	CheckOutPage checkOutPage = new CheckOutPage(driver);
+	InformationPage informationPage = new InformationPage(driver);
+	OverviewPage overviewPage = new OverviewPage(driver);
+	CompletePage completePage = new CompletePage(driver);
 
 	@BeforeTest
 	public void startWebDriver() {
@@ -28,9 +36,27 @@ public class TC02_AddToCart {
 
 	@Test
 	public void TC02() {
+		//STEP 1
 		loginPage.login(GlobalVariables.STANDARD_USER, GlobalVariables.PASSWORD);
-		inventoryPage.addToCart(GlobalVariables.FIRSTNAME, GlobalVariables.LASTNAME, GlobalVariables.ZIPCODE);
-		boolean textValidacion = inventoryPage.verifyOrderText();
+		
+		//STEP 2
+		boolean isDisplayed = addToCartPage.verifyRemoveButton();
+		Assert.assertTrue(isDisplayed);
+		
+		//STEP  3
+		addToCartPage.addToCart();
+		
+		//STEP 4
+		checkOutPage.checkOut();
+		
+		//STEP 5
+		informationPage.informationData(GlobalVariables.FIRSTNAME, GlobalVariables.LASTNAME, GlobalVariables.ZIPCODE);
+		
+		//STEP 6
+		overviewPage.overview();
+		
+		//STEP 7
+		boolean textValidacion = completePage.verifyOrderText();
 		Assert.assertTrue(textValidacion);
 	}
 
